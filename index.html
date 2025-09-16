@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Primary Meta Tags -->
-    <title>Portfolio Template - Open source</title>
-    <meta name="title" content="Portfolio Template - Open source" />
-    <meta
-      name="description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
+    <title>Albert Hsu</title>
+    <meta name="title" content="Albert Hsu" />
+    <meta name="description" content="Albert Hsu"/>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -85,6 +83,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
   </head>
+
   <body>
     <header id="hero">
       <!-- Navbar -->
@@ -98,9 +97,10 @@
           </h1>
           <!-- Navbar links -->
           <ul class="nav-menu">
+            <li><a class="nav-link" href="#">HOME</a></li>
+            <li><a class="nav-link" href="#aboutme">ABOUTME</a></li>
+            <li><a class="nav-link" href="#education">EDUCATION</a></li>
             <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="#">CONTACT</a></li>
-            <li><a class="nav-link" href="#">BlOG</a></li>
             <li>
               <a
                 class="nav-link btn btn-primary"
@@ -133,16 +133,13 @@
           src="assets/profile-image.svg"
           alt=""
         />
-        <h1>Hi I'm Franklin</h1>
+        <h1>Hi I'm Albert Hsu</h1>
 
         <div class="content-text">
-          <h2>Building digital</h2>
-          <h2>products, brands, and experience.</h2>
-
-          <p>
-            A Frontend Developer and Visual Designer with experience in web
-            design, brand identity and product design.
-          </p>
+          <h2>To live an infinite brilliance</h2>
+          <h2>within our limited life!</h2>
+          <h3>在有限的生命中活出無限的精彩！</h3>
+          <p></p>
         </div>
         <a
           href="https://github.com/CommunityPro/portfolio-html"
@@ -152,6 +149,82 @@
         >
       </section>
     </header>
+
+
+    <!-- About Me -->
+    <section id="aboutme" class="aboutme-container container">
+      <div class="division"></div> 
+      <div class="content-text">
+        <h2>About Me</h2>
+        <p>自我介紹</p>
+      </div>
+    </section>
+
+
+    <!-- Education -->
+    <section id="education" class="education-container container">
+      <div class="division"></div> 
+      <div class="content-text">
+        <h2>Education</h2>
+        <p>學歷</p>
+      </div>
+        <div class="education-list">
+          <div class="education-item">
+            <div class="edu-time">2022 – Now</div>
+            <div class="edu-zh">
+              <strong>中原大學</strong><br/>
+              <strong>資訊工程學系</strong><br/>
+              數位人文與社會跨領域學分學程
+            </div>
+            <div class="edu-en">
+              <strong>Chung Yuan Christian University<br/>
+              <strong></strong>Department of Information and Computer Engineering</strong><br/>
+              Digital Humanities and Society Interdisciplinary Course Program
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="edu-time">2019 – 2022</div>
+            <div class="edu-zh">
+              臺中市私立僑泰高級中學
+            </div>
+            <div class="edu-en">
+              Chiao Tai High School
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="edu-time">2016 – 2019</div>
+            <div class="edu-zh">
+              臺中市立居仁國民中學
+            </div>
+            <div class="edu-en">
+              Taichung Municipal Chu Jen Junior High School
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="edu-time">2010 – 2016</div>
+            <div class="edu-zh">
+              臺中市西區忠孝國民小學
+            </div>
+            <div class="edu-en">
+              Taichung City Chung Hsiao Elementary School
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="edu-time">2008 – 2010</div>
+            <div class="edu-zh">
+              康乃爾幼兒園
+            </div>
+            <div class="edu-en">
+              Cornel English School Kindergarten
+            </div>
+          </div>
+        </div>
+    </section>
+
 
     <!-- Projects -->
     <section id="projects" class="project-container container">
@@ -277,7 +350,7 @@
         </div>
         <!-- Attribution -->
         <div class="attribution">
-          <a
+          <!-- <a
             href="https://github.com/CommunityPro/portfolio-html"
             target="_blank"
             rel="noopener noreferrer"
@@ -287,9 +360,9 @@
               alt="attribution"
               width="150px"
             />
-          </a>
+          </a> -->
         </div>
-        <p>Copyright &copy; Communitypro <span id="datee"></span>, All rights reserved</p>
+        <p>Copyright &copy; Albert Hsu <span id="datee"></span> All rights reserved</p>
       </div>
     </footer>
     <script src="js/script.js"></script>
