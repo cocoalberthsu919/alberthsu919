@@ -162,6 +162,44 @@ body {
   background-color: var(--card-background);
   margin: 5.5rem 0;
 }
+
+
+/* Education */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.edu-time {
+  width: 15%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.edu-zh {
+  text-align: left;
+  width: 30%;
+}
+
+.edu-en {
+  text-align: right;
+  width: 55%;
+}
+
+
+
+
+
+
+
 /* Projects */
 #projects {
   display: flex;
