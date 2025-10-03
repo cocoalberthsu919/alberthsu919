@@ -17,6 +17,17 @@ h2::selection {
   background: var(--primary-color);
 }
 
+p {
+    margin-top: 5px;    /* 上間距 */
+    margin-bottom: 5px; /* 下間距 */
+}
+
+*::selection {
+  color: #111;
+  background: var(--primary-color);
+}
+
+
 /* Buttons */
 .btn {
   display: inline-block;

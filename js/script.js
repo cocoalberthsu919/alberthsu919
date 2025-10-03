@@ -65,3 +65,40 @@ let myDate = document.querySelector("#datee");
 
 const yes = new Date().getFullYear();
 myDate.innerHTML = yes;
+
+
+// 鎖右鍵
+// document.oncontextmenu = function(){return false;}
+// document.onselectstart = function(){return false;}
+// document.onmousedown = function(){return false;}
+
+
+// // 取得 modal 元素
+// const modal = document.getElementById("myModal");
+// const btn = document.getElementById("openModal");
+
+// // 點擊按鈕打開 modal
+// btn.onclick = function() {
+//   modal.style.display = "flex";
+// }
+
+// // 點擊 modal 外層也關閉
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
+
+
+document.querySelectorAll('.detail-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const details = btn.nextElementSibling;
+    if (details.style.display === "none") {
+      details.style.display = "block";
+      btn.textContent = "▲";
+    } else {
+      details.style.display = "none";
+      btn.textContent = "▼";
+    }
+  });
+});

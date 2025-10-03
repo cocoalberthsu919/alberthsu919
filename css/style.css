@@ -18,6 +18,10 @@
   --card-background: #f4f4f4;
   --bg-secondary-two: #111111;
 
+  --bg-modal: rgba(0, 0, 0, 0.5);
+
+  --division: #f4f4f4;
+
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
   /* Font Weight */
@@ -40,6 +44,11 @@
   --bg-secondary: #ffffff;
   --card-background: #111111;
   --bg-secondary-two: #f4f4f4;
+
+  --bg-modal: rgba(255, 255, 255, 0.5);
+
+  --division: #393939;
+
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
 }
 
@@ -71,6 +80,44 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
 }
+
+/* 連結文字 */
+#word-link {
+  color: var(--text-color);        /* 設定連結文字顏色 */
+  text-decoration: underline; /* 底線 */
+   text-decoration-color: var(--primary-color); /* 底線顏色 */
+}
+
+
+/* 下拉選單 */
+
+.nav-item {
+  position: relative; /* 讓下拉選單絕對定位於父元素 */
+}
+
+.dropdown {
+  display: none;        /* 預設隱藏 */
+  position: absolute;
+  top: 100%;            /* 下拉在父選單正下方 */
+  left: 0;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background: var(--bg-primary);     /* 下拉選單背景 */
+  box-shadow: var(--shadow);
+}
+
+.nav-item:hover .dropdown {
+  display: block;       /* 滑鼠經過顯示下拉選單 */
+}
+
+.dropdown li {
+  padding: 5px 10px;   /* 上下，左右 */
+  margin: 0;
+}
+
+
+
 
 /* Navbar */
 .navbar {
@@ -159,49 +206,313 @@ body {
 .division {
   width: 100%;
   height: 2px;
-  background-color: var(--card-background);
+  background-color: var(--division);
   margin: 5.5rem 0;
 }
 
 
-/* Education */
-.education-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+
+
+
+/* Info */
+.info-boxs {
+  display: flex;             /* 橫向排列 */
+  gap: 20px;                 /* 每個 info-box 之間的間距 */
+  flex-wrap: wrap;           /* 如果太擠就換行 */
+  justify-content: center;   /* 水平置中 */
+  align-items: center;       /* 垂直置中 */
 }
 
-.education-item {
+.info-box {
+  display: flex;             /* 讓圖示跟文字在一排 */
+  align-items: center;       /* 垂直置中 */
+  gap: 8px;                  /* 圖示與文字間距 */
+  padding: 12px 16px;        /* 區塊內間距 */
+  border: 1px solid #ccc;    /* 外框 */
+  border-radius: 8px;        /* 圓角 */
+  font-size: 16px;           /* 文字大小 */
+  cursor: default;
+}
+
+.info-box img {
+  width: 32px;   /* 調整圖片大小 */
+  height: 32px;
+}
+
+
+/* Hobbies */
+.hobbies-boxs {
+  display: flex;             /* 橫向排列 */
+  gap: 20px;                 /* 每個 info-box 之間的間距 */
+  flex-wrap: wrap;           /* 如果太擠就換行 */
+  justify-content: center;   /* 水平置中 */
+  align-items: center;       /* 垂直置中 */
+}
+
+.hobbies-box {
+  display: flex;
+  flex-direction: column;    /* 圖片在上文字在下 */
+  align-items: center;       /* 水平置中 */
+  gap: 8px;                  
+  padding: 12px 16px;        
+  border: 1px solid #ccc;    
+  border-radius: 8px;        
+  font-size: 16px;           
+  cursor: default;
+}
+
+.hobbies-box img {
+  width: 64px;   /* 調整圖片大小 */
+  height: 64px;
+}
+
+
+
+/* Skill */
+.skills-list {
+  display: flex;
+  flex-direction: column; /* 一列一列 */
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  gap: 15px;           /* 文字與 bar 間距 */
+}
+
+.skill p {
+  margin: 0;
+  font-weight: bold;
+  width: 120px;        /* 固定文字欄位寬度，避免對不齊 */
+  text-align: right;   /* 文字靠右對齊 */
+}
+
+.skill-bar {
+  flex: 1;             /* 吃掉剩下空間 */
+  background: var(--division);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.skill-fill {
+  background: var(--primary-color);
+  height: 100%;
+  text-align: right;
+  padding-right: 6px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 8px 0 0 8px;
+  transition: width 1.5s ease-in-out; /* 動畫效果 */
+}
+
+
+
+
+
+/* 間隔 */
+.divider { height:1px;
+  background: transparent; /* 透明 */
+  margin:5px 0;
+} 
+
+.divider-big {
+  background: transparent; /* 透明 */
+  margin:40px 0;  
+}
+
+
+/* List */
+.list-groups {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  gap: 2rem;              /* 每個子項上下間距 20px */
+  align-items: stretch;     /* 垂直撐滿，直線才會對齊 */
+}
+
+
+.list-group {
+  display: flex;
+  flex-direction: row;         /* 水平排列 */
+  justify-content: space-between; /* 平均分配水平空間 */
+  align-items: flex-start;     /* 頂部對齊 */
+  width: 100%;                 /* 滿寬 */
+  position: relative;
+  gap: 15px;
+}
+
+
+/* 垂直文字 */
+.list-label {
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+
+  /* 英文垂直顯示 */
+  writing-mode: vertical-rl;    /* 垂直排列文字 */
+  text-orientation: mixed;      /* 英文保持直立 */
+}
+
+/* 直線 */
+.list-line {
+  width: 2px;
+  background: var(--primary-color);
+  flex-shrink: 0;
+  align-self: stretch;  /* 撐滿父容器高度 */
+  
+}
+
+
+
+/* time */
+.time-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.time-item {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem 1rem; /* 上下 0.5rem，左右 1rem */
   align-items: flex-start;
 }
 
-.edu-time {
+.time-time {
   width: 15%;
   text-align: left;
   font-weight: bold;
 }
 
-.edu-zh {
+.time-zh {
   text-align: left;
   width: 30%;
 }
 
-.edu-en {
+.time-en {
   text-align: right;
   width: 55%;
 }
 
+/* 手機版響應式，改成上下排列 */
+@media (max-width: 600px) {
+  .time-item {
+    flex-direction: column;
+  }
+  .time-time, .time-zh, .time-en {
+    width: 100%;
+    text-align: left;
+  }
+}
 
 
 
+/* Activity */
+/* Activities 容器 */
+.activities {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 自動調整欄位數量 */
+  gap: 1rem; /* 卡片間距 */
+  margin: 2rem 0;
+}
+
+/* Activity 單元 */
+.activity {
+  position: relative;  
+  border: 1px solid var(--primary-color);      /* 外框 */
+  border-radius: 8px;           /* 圓角 */
+  padding: 15px;                /* 四邊內距 */
+  /* background-color: var(--card-background);    卡片背景 */
+  /* box-shadow: var(--shadow);  */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;      /* 文字靠左 */
+}
 
 
+/* 文字樣式 */
+.activity p {
+  /*margin: 5px 0;  每段文字上下間距 */
+  text-align: left; /* 文字靠左 */
+}
+
+/* 響應式：手機一個卡片 */
+@media (max-width: 600px) {
+  .activities {
+    grid-template-columns: 1fr; /* 只顯示一欄 */
+  }
+}
+
+.link-out {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 24px;      /* SVG 寬度 */
+  height: 24px;     /* SVG 高度 */
+}
+
+.link-out img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+
+.detail-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;       /* 讓按鈕獨佔一行 */
+  margin: 10px auto;    /* 自動左右置中 */
+}
+
+.details p {
+  margin: 8px 0;
+}
+
+
+
+/* 彈出視窗 */
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-modal);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  color: var(--text-color);
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.3s;
+} 
+
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+} */
 
 /* Projects */
-#projects {
+/* #projects {
   display: flex;
   flex-direction: column;
   margin: 2rem auto 5rem;
@@ -216,33 +527,41 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.9rem;
+  gap: 0.9rem;
 }
 
 .card .project-bio p {
   font-size: 0.83rem;
+  font-weight: bold;
 }
 
 .card .project-bio h3 {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .project-info {
   display: flex;
   justify-content: space-between;
-  opacity: 0;
+  opacity: 1;
   position: relative;
   transition: 0.5s ease-in-out;
+  padding: 10px;         
+  box-sizing: border-box; 
+  flex-direction: column; 
+  align-items: flex-start; 
 }
 
 .project-bio {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-  top: 160px;
-  left: 10px;
-}
+  justify-content: flex-start; 
+  align-items: flex-start;     
+  margin: 0;                   
+  padding: 0;                  
+} */
+
+
+
 
 /* Footer */
 #footer {
