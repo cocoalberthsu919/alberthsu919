@@ -74,8 +74,6 @@ myDate.innerHTML = yes;
 
 
 document.querySelectorAll('.detail-down').forEach(btn => {
-  const icon = btn.querySelector('img'); // 取得內部圖片元素
-
   btn.addEventListener('click', () => {
     const details = btn.nextElementSibling;
     const isOpen = details.style.display === 'block';
@@ -83,15 +81,11 @@ document.querySelectorAll('.detail-down').forEach(btn => {
     // 顯示 / 隱藏內容
     details.style.display = isOpen ? 'none' : 'block';
 
-    // 切換箭頭狀態
+    // 切換旋轉狀態
     btn.classList.toggle('open', !isOpen);
-
-    // 切換上下箭頭圖示
-    icon.src = isOpen
-      ? './assets/detail-down-icon.svg?v=${Date.now()'
-      : './assets/detail-up-icon.svg?v=${Date.now()';
   });
 });
+
 
 
 
