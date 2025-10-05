@@ -88,8 +88,8 @@ document.querySelectorAll('.detail-down').forEach(btn => {
 
     // 切換上下箭頭圖示
     icon.src = isOpen
-      ? './assets/detail-down-icon.svg'
-      : './assets/detail-up-icon.svg';
+      ? './assets/detail-down-icon.svg?v=${Date.now()'
+      : './assets/detail-up-icon.svg?v=${Date.now()';
   });
 });
 
