@@ -596,7 +596,7 @@ body {
   flex-direction: column; /* 上下排列 */
   align-items: center;    /* 水平置中 */
   gap: 20px;              /* 影片與文字間距 */
-  width: 320px;           /* 固定文字寬度 */
+  width: 300px;           /* 固定文字寬度 */
 }
 
 .canva-square {
